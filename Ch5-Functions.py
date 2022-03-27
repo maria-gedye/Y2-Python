@@ -13,7 +13,6 @@ import random
 # print "Miles: ", m, "m"
 
 
-
 # Ex6 Calories from fat and carbohydrates
 # print("Calorie calculator")
 # calf = 0
@@ -37,18 +36,30 @@ import random
 # print "Total calories from fat: ", calf, "\nTotal calories from carbohydrate: ", calc
 
 
-
 # Ex11 Math Quiz
+#
+# def quiz(n1, n2):
+#     print "\t", n1, "\n+\t", n2, "\n="
+#     answer = input("What is the answer?  ")
+#     if answer == (n1 + n2):
+#         print("Correct!")
+#     else:
+#         print "incorrect. Answer is: ", n1 + n2
+#
+#
+# num1 = random.randint(1, 999)
+# num2 = random.randint(1, 999)
+# quiz(num1, num2)
 
-def quiz(n1, n2):
-    print "\t", n1, "\n+\t", n2, "\n="
-    answer = input("What is the answer?  ")
-    if answer == (n1 + n2):
-        print("Correct!")
-    else:
-        print "incorrect. Answer is: ", n1 + n2
+
+# Exercise 14 Kinetic Energy
+mass = input("Mass (kg):  ")
+velocity = input("Velocity (m per sec):  ")
 
 
-num1 = random.randint(1, 999)
-num2 = random.randint(1, 999)
-quiz(num1, num2)
+def kinetic_energy(m, v):
+    ke = (0.5 * m) * (v * v)
+    return ke
+
+
+print "Kinetic energy in Joules is  ", kinetic_energy(mass, velocity), "J"
