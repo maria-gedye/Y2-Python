@@ -53,13 +53,41 @@ import random
 
 
 # Exercise 14 Kinetic Energy
-mass = input("Mass (kg):  ")
-velocity = input("Velocity (m per sec):  ")
+# mass = input("Mass (kg):  ")
+# velocity = input("Velocity (m per sec):  ")
+#
+#
+# def kinetic_energy(m, v):
+#     ke = (0.5 * m) * (v * v)
+#     return ke
+#
+#
+# print "Kinetic energy in Joules is  ", kinetic_energy(mass, velocity), "J"
 
 
-def kinetic_energy(m, v):
-    ke = (0.5 * m) * (v * v)
-    return ke
+
+#Exercise 16 Odd/Even counter
+i = 100
+numberlist = []
+
+for count in range(100):
+    numberlist.append(random.randint(1, 250))
 
 
-print "Kinetic energy in Joules is  ", kinetic_energy(mass, velocity), "J"
+def odd_even_count(l):
+    even_count = 0
+
+    for i in l:
+        if i % 2:
+            even_count += 1
+
+    odd_count = 100 - even_count
+    print "Even count: ", even_count, "\nOdd count: ", odd_count
+
+# call function
+odd_even_count(numberlist)
+
+
+
+
+
