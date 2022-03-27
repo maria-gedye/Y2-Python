@@ -1,6 +1,7 @@
 # Chapter 5 Exercises 1, 6, 11, 14, 16, 18
 import random
 
+
 # Ex1 Kilometer Converter
 
 # def km_to_miles():
@@ -65,29 +66,46 @@ import random
 # print "Kinetic energy in Joules is  ", kinetic_energy(mass, velocity), "J"
 
 
-
-#Exercise 16 Odd/Even counter
-i = 100
-numberlist = []
-
-for count in range(100):
-    numberlist.append(random.randint(1, 250))
-
-
-def odd_even_count(l):
-    even_count = 0
-
-    for i in l:
-        if i % 2:
-            even_count += 1
-
-    odd_count = 100 - even_count
-    print "Even count: ", even_count, "\nOdd count: ", odd_count
-
-# call function
-odd_even_count(numberlist)
-
+# Exercise 16 Odd/Even counter
+# i = 100
+# numberlist = []
+#
+# for count in range(100):
+#     numberlist.append(random.randint(1, 250))
+#
+#
+# def odd_even_count(l):
+#     even_count = 0
+#
+#     for i in l:
+#         if i % 2:
+#             even_count += 1
+#
+#     odd_count = 100 - even_count
+#     print "Even count: ", even_count, "\nOdd count: ", odd_count
+#
+# # call function
+# odd_even_count(numberlist)
 
 
+# Ex18 Prime Number List
+def is_prime(n):
+    b = False
+    if n > 1:
+        for i in range(2, n):
+            if n % i == 0:  # if num has other multiple factors...
+                b = False
+                break       # stop looping!
+            else:
+                b = True
+    return b
 
 
+mylist = []
+
+for j in range(100):
+    mb = is_prime(j)
+    if mb:
+        mylist.append(j)
+
+print(mylist)
