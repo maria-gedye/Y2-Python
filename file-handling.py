@@ -15,16 +15,18 @@ import string
 
 count = input("How many students?  ")
 s_file = open('students.txt', 'w')
-
+s_file.write("Student Record 2022\n")
 
 for i in range(count):
-    print(i + 1)
-    name = raw_input("Enter name: ")
-    s_file.write(name + "\n")
+    myindex = str(i + 1)
+    name = raw_input(myindex + " Enter name: ")
+    record = myindex + " " + name
+    s_file.write(record + "\n")
 
 s_file.close()  # close after finished writing
 
 s_file = open('students.txt', 'r')
+print("\n\n")
 print(s_file.read())
 
 
