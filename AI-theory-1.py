@@ -2,7 +2,7 @@
 # the sum of the squares of the elements of the matrix.
 from math import sqrt
 
-row = 2
+row = 3
 col = 2
 
 def frobeniusNorm(mat):
@@ -15,6 +15,8 @@ def frobeniusNorm(mat):
     res = sqrt(sumSq)
     return round(res, 5)
 
-m = [[1, 4], [0, (-2)]]    #2x2 matrix
+m = [[2, (-2)],
+     [(-3), 1],
+     [5, (-3)] ]    #3x2 matrix
 
 print(frobeniusNorm(m))
